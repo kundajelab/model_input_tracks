@@ -6,7 +6,7 @@ config = {
     'url': 'https://github.com/kundajelab/model_input_tracks',
     'description': 'Generate genome-wide input tracks for deep learning',
     'version': '0.1',
-    'packages': ['gc'],
+    'packages': [],
     'setup_requires': [],
     'install_requires': ['numpy>=1.15','pyBigWig>=0.3.6', 'pysam'],
     'scripts': [],
