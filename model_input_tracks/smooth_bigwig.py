@@ -32,8 +32,10 @@ def main():
             start_pos=cur_base-args.flank
             end_pos=cur_base+args.flank+1
             vals.append(sum(chrom_vals[start_pos:end_pos])/interval_size)
-        vals.append([0.0]*args.flank)
+        vals=vals+([0.0]*args.flank)
         #write to output bigwig
+        print(str(len(vals)))
+        print(str(chrom_size))
         out_bw.addEntries(chrom,0,values=vals,span=1,step=1)
         print("wrote bigwig entries for chrom:"+str(chrom))
     out_bw.close()
